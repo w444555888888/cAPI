@@ -282,11 +282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cAPI\\BookingApi\\BookingApi.csproj",
+      "projectUniqueName": "D:\\cAPI\\BookingApi.csproj",
       "projectName": "BookingApi",
-      "projectPath": "D:\\cAPI\\BookingApi\\BookingApi.csproj",
+      "projectPath": "D:\\cAPI\\BookingApi.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\cAPI\\BookingApi\\obj\\",
+      "outputPath": "D:\\cAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config"

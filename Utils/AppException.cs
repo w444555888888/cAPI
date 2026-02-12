@@ -4,12 +4,12 @@ namespace BookingApi.Utils
 {
     public class AppException : Exception 
     {
-        public int Status {get;}
-        public object Details {get;}
+        public int StatusCode { get; }
+        public object? Details { get; }
 
-        public AppException(int status, string message, object details= null) : base(message)
+        public AppException(int statusCode, string message, object? details= null) : base(message)
         {
-            Status = status;
+            StatusCode = statusCode;
             Details = details;
         }
     }

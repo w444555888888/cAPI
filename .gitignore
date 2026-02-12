@@ -1,0 +1,21 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Debug symbols
+*.pdb
+
+# Executables
+*.exe
+*.dll
+*.log
+
+# Rider / VSCode
+.idea/
+.vscode/

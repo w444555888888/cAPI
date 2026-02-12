@@ -18,7 +18,7 @@ builder.Services.Configure<EmailSettings>(
     builder.Configuration.GetSection("EmailSettings"));
 
 // appsettings.json 白名單
-var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() ?? new string[0];
 
 
 //  CORS 設定
@@ -82,8 +82,8 @@ wsService.InitWebSocket(app); // 對應 Node initWebSocket(server)
 
 
 // 啟動 WebServer
-var port = builder.Configuration.GetValue<int>("Port");
-if (!string.IsNullOrEmpty(port))
+var port = builder.Configuration.GetValue<int?>("Port");
+if (port.HasValue)
 {
     app.Run($"http://0.0.0.0:{port}");
 }

@@ -1,4 +1,4 @@
 namespace BookingApi.Services
 {
-    public class UserService { }
+    public class JwtSettings { }
 }
