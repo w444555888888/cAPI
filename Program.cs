@@ -76,10 +76,20 @@ var database = client.GetDatabase(mongoSettings.DatabaseName);
 Console.WriteLine("MongoDB connected!");
 
 
-// 啟動 WebServer
-var port = builder.Configuration.GetValue<int>("Port");
-app.Run($"http://localhost:{port}");
-
 // WebSocket 啟動
 var wsService = app.Services.GetRequiredService<WebSocketService>();
 wsService.InitWebSocket(app); // 對應 Node initWebSocket(server)
+
+
+// 啟動 WebServer
+var port = builder.Configuration.GetValue<int>("Port");
+if (!string.IsNullOrEmpty(port))
+{
+    app.Run($"http://0.0.0.0:{port}");
+}
+else
+{
+    app.Run(); 
+}
+
+
