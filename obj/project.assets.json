@@ -15,6 +15,15 @@
           }
         }
       },
+      "KdTree/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/KdTreeLib.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/KdTreeLib.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.3": {
         "type": "package",
         "dependencies": {
@@ -83,6 +92,18 @@
           }
         }
       },
+      "NGeoNames/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "KdTree": "1.4.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/NGeoNames.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/NGeoNames.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -139,6 +160,27 @@
         "lib/netstandard2.0/DnsClient.xml",
         "lib/netstandard2.1/DnsClient.dll",
         "lib/netstandard2.1/DnsClient.xml"
+      ]
+    },
+    "KdTree/1.4.0": {
+      "sha512": "5zURS852KmpBaUM9YH+lgO/wXLzmjZEVyFHEFVndp8pVWHBZa7S0Gw/rl87PuQcsAhbzq7qAPtQnfnFNoKLp5g==",
+      "type": "package",
+      "path": "kdtree/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kdtree.1.4.0.nupkg.sha512",
+        "kdtree.nuspec",
+        "lib/net45/KdTreeLib.dll",
+        "lib/net451/KdTreeLib.dll",
+        "lib/net452/KdTreeLib.dll",
+        "lib/net46/KdTreeLib.dll",
+        "lib/net461/KdTreeLib.dll",
+        "lib/net462/KdTreeLib.dll",
+        "lib/net47/KdTreeLib.dll",
+        "lib/net471/KdTreeLib.dll",
+        "lib/netcoreapp2.0/KdTreeLib.dll",
+        "lib/netstandard2.0/KdTreeLib.dll"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/10.0.3": {
@@ -215,6 +257,28 @@
         "packageIcon.png"
       ]
     },
+    "NGeoNames/1.5.1": {
+      "sha512": "xhTnFkxiV6oKCbp7GRCm4tbH+MDdJdm4gCiDaDYtVMZl+xJ5MTfWaU5RWE2juQbwnp8MQWpGEytFFbH8Z8Ti5Q==",
+      "type": "package",
+      "path": "ngeonames/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NGeoNames.dll",
+        "lib/net45/NGeoNames.xml",
+        "lib/net451/NGeoNames.dll",
+        "lib/net452/NGeoNames.dll",
+        "lib/net46/NGeoNames.dll",
+        "lib/net461/NGeoNames.dll",
+        "lib/net462/NGeoNames.dll",
+        "lib/net47/NGeoNames.dll",
+        "lib/net471/NGeoNames.dll",
+        "lib/netcoreapp2.0/NGeoNames.dll",
+        "lib/netstandard2.0/NGeoNames.dll",
+        "ngeonames.1.5.1.nupkg.sha512",
+        "ngeonames.nuspec"
+      ]
+    },
     "SharpCompress/0.30.1": {
       "sha512": "XqD4TpfyYGa7QTPzaGlMVbcecKnXy4YmYLDWrU+JIj7IuRNl7DH2END+Ll7ekWIY8o3dAMWLFDE1xdhfIWD1nw==",
       "type": "package",
@@ -273,7 +337,8 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.OpenApi >= 10.0.3",
-      "MongoDB.Driver >= 3.6.0"
+      "MongoDB.Driver >= 3.6.0",
+      "NGeoNames >= 1.5.1"
     ]
   },
   "packageFolders": {
@@ -326,6 +391,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[3.6.0, )"
+          },
+          "NGeoNames": {
+            "target": "Package",
+            "version": "[1.5.1, )"
           }
         },
         "imports": [

@@ -3,6 +3,9 @@ using BookingApi.Services;
 using BookingApi.Utils;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System;
+using System.Threading.Tasks;
+
 
 // Web 應用程式的建構器
 var builder = WebApplication.CreateBuilder(args);
@@ -81,6 +84,21 @@ var wsService = app.Services.GetRequiredService<WebSocketService>();
 wsService.InitWebSocket(app); // 對應 Node initWebSocket(server)
 
 
+
+// string departureCity = "Hong Kong";
+// string arrivalCity = "Chongqing";
+
+// int? duration = await FlightUtils.CalculateFlightDurationAsync(departureCity, arrivalCity);
+
+// if (duration.HasValue)
+//     Console.WriteLine($"從 {departureCity} 到 {arrivalCity} 的飛行時間約 {duration.Value} 分鐘");
+// else
+//     Console.WriteLine("找不到城市座標，無法計算飛行時間");
+
+
+
+
+
 // 啟動 WebServer
 var port = builder.Configuration.GetValue<int?>("Port");
 if (port.HasValue)
@@ -91,5 +109,6 @@ else
 {
     app.Run(); 
 }
+
 
 

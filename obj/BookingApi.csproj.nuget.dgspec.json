@@ -51,6 +51,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.6.0, )"
+            },
+            "NGeoNames": {
+              "target": "Package",
+              "version": "[1.5.1, )"
             }
           },
           "imports": [
